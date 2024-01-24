@@ -8,6 +8,14 @@
         "env": []
     },
     {
+        "id": "6be877cdc0a69cdc",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "b2a9b03e5fcafc92",
         "type": "inject",
         "z": "9b7e1fa5ab1f23a5",
@@ -48,8 +56,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
-        "y": 100,
+        "x": 640,
+        "y": 220,
         "wires": []
     },
     {
@@ -185,6 +193,315 @@
         "statusType": "auto",
         "x": 580,
         "y": 620,
+        "wires": []
+    },
+    {
+        "id": "988097bda0b8d3be",
+        "type": "inject",
+        "z": "9b7e1fa5ab1f23a5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 580,
+        "wires": [
+            [
+                "5aeed382c03b967d"
+            ]
+        ]
+    },
+    {
+        "id": "5aeed382c03b967d",
+        "type": "debug",
+        "z": "9b7e1fa5ab1f23a5",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 260,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "253da719cbecf00f",
+        "type": "inject",
+        "z": "9b7e1fa5ab1f23a5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 100,
+        "wires": [
+            [
+                "2fa176e2fd964163"
+            ]
+        ]
+    },
+    {
+        "id": "2fa176e2fd964163",
+        "type": "debug",
+        "z": "9b7e1fa5ab1f23a5",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "240ce89e08624837",
+        "type": "exec",
+        "z": "6be877cdc0a69cdc",
+        "command": "cd /home/nodered/node-red-home/node-red-flows/projects/bugCheck && git config --global --add safe.directory /home/nodered/node-red-home/node-red-flows/projects/bugCheck && git status",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 680,
+        "y": 480,
+        "wires": [
+            [
+                "f63011e8a94a76b3"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "19edd17e0dc1a8a0",
+        "type": "inject",
+        "z": "6be877cdc0a69cdc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 260,
+        "wires": [
+            [
+                "240ce89e08624837"
+            ]
+        ]
+    },
+    {
+        "id": "f63011e8a94a76b3",
+        "type": "debug",
+        "z": "6be877cdc0a69cdc",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "335e7993c89469f3",
+        "type": "exec",
+        "z": "6be877cdc0a69cdc",
+        "command": "cd /home/nodered/node-red-home/node-red-flows/projects/bugCheck && git config --global --add safe.directory /home/nodered/node-red-home/node-red-flows/projects/bugCheck && git commit -m \"ggop\"",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 800,
+        "y": 1060,
+        "wires": [
+            [
+                "c5b2011b2daa336f"
+            ],
+            [
+                "dc38edb6bc41d6ef"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "a517db0b2bffd686",
+        "type": "inject",
+        "z": "6be877cdc0a69cdc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 860,
+        "wires": [
+            [
+                "335e7993c89469f3"
+            ]
+        ]
+    },
+    {
+        "id": "c5b2011b2daa336f",
+        "type": "debug",
+        "z": "6be877cdc0a69cdc",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1680,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "dc38edb6bc41d6ef",
+        "type": "debug",
+        "z": "6be877cdc0a69cdc",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1700,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "a604458fd44e9ab8",
+        "type": "exec",
+        "z": "6be877cdc0a69cdc",
+        "command": "cd /home/nodered/node-red-home/node-red-flows/projects/bugCheck && git config --global --add safe.directory /home/nodered/node-red-home/node-red-flows/projects/bugCheck && git add *",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 780,
+        "y": 740,
+        "wires": [
+            [
+                "dd2b2a56cbdb3519"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e2c5fd2188f23efd",
+        "type": "inject",
+        "z": "6be877cdc0a69cdc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 320,
+        "y": 520,
+        "wires": [
+            [
+                "a604458fd44e9ab8"
+            ]
+        ]
+    },
+    {
+        "id": "dd2b2a56cbdb3519",
+        "type": "debug",
+        "z": "6be877cdc0a69cdc",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 500,
         "wires": []
     }
 ]
