@@ -56,8 +56,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 640,
-        "y": 220,
+        "x": 1160,
+        "y": 240,
         "wires": []
     },
     {
@@ -508,7 +508,7 @@
         "id": "9bf297952c1a99d3",
         "type": "exec",
         "z": "6be877cdc0a69cdc",
-        "command": "cd /home/nodered/node-red-home/node-red-flows/projects/bugCheck && git push origin main",
+        "command": "cd /home/nodered/node-red-home/node-red-flows/projects/bugCheck && git push origin/main",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
