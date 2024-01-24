@@ -356,7 +356,7 @@
         "id": "335e7993c89469f3",
         "type": "exec",
         "z": "6be877cdc0a69cdc",
-        "command": "cd /home/nodered/node-red-home/node-red-flows/projects/bugCheck && git config --global --add safe.directory /home/nodered/node-red-home/node-red-flows/projects/bugCheck && git commit -m \"ggop\"",
+        "command": "cd /home/nodered/node-red-home/node-red-flows/projects/bugCheck && git config --global --add safe.directory /home/nodered/node-red-home/node-red-flows/projects/bugCheck && git config --global user.email \"rohitashavsoni@yahoo.com\" && git config --global user.name \"rohitashav Soni\"&& git commit -m \"ggop\" ",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
@@ -364,8 +364,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 800,
-        "y": 1060,
+        "x": 1050,
+        "y": 1080,
         "wires": [
             [
                 "c5b2011b2daa336f"
@@ -480,8 +480,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 320,
-        "y": 520,
+        "x": 240,
+        "y": 540,
         "wires": [
             [
                 "a604458fd44e9ab8"
@@ -500,8 +500,160 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1180,
-        "y": 500,
+        "x": 1340,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "9bf297952c1a99d3",
+        "type": "exec",
+        "z": "6be877cdc0a69cdc",
+        "command": "cd /home/nodered/node-red-home/node-red-flows/projects/bugCheck && git push origin main",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 720,
+        "y": 1500,
+        "wires": [
+            [
+                "a417e2554b1b2070"
+            ],
+            [
+                "218ba47a49d44ba1"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "56390e75f8dbdd73",
+        "type": "inject",
+        "z": "6be877cdc0a69cdc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 280,
+        "y": 1380,
+        "wires": [
+            [
+                "9bf297952c1a99d3"
+            ]
+        ]
+    },
+    {
+        "id": "a417e2554b1b2070",
+        "type": "debug",
+        "z": "6be877cdc0a69cdc",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "047426fa35686b54",
+        "type": "exec",
+        "z": "6be877cdc0a69cdc",
+        "command": "cd /home/nodered/node-red-home/node-red-flows/projects/bugCheck && git branch -a",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 780,
+        "y": 1320,
+        "wires": [
+            [
+                "fb2878cedf2736b3"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "edad7114a6ef849a",
+        "type": "inject",
+        "z": "6be877cdc0a69cdc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 360,
+        "y": 1200,
+        "wires": [
+            [
+                "047426fa35686b54"
+            ]
+        ]
+    },
+    {
+        "id": "fb2878cedf2736b3",
+        "type": "debug",
+        "z": "6be877cdc0a69cdc",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1280,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "218ba47a49d44ba1",
+        "type": "debug",
+        "z": "6be877cdc0a69cdc",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 1480,
         "wires": []
     }
 ]
